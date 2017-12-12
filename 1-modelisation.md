@@ -109,7 +109,7 @@ Une cardinalité minimale de 1 doit se justifier par le fait que les individus 
 
 
 ### Modèle relationnel (MRD)
-![première base, modèle relationnel](img/relation.png)
+![première base, modèle relationnel](img/association-hasJob.png)
 
 ### Table `architect`
 |id|name|firstname|birth|death|
