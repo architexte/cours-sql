@@ -87,7 +87,7 @@ Comment contrôler plus finement cette liste d’autorité ?
 ## Restructuration 2 (association)
 
 ### Modèle conceptuel
-**Assocation.** Une association est une liaison qui a une signification précise entre plusieurs **entités**.  
+**Association.** Une association est une liaison qui a une signification précise entre plusieurs **entités**.  
 > *Un architecte **réalise** une mission*.
 
 **Cardinalité.** C’est le nombre d’occurrences, minimal et maximal – exprimé sous la forme d’un couple (card. min, card. max) –, d’une association par rapport à chaque occurrence d’une entité donnée.  
@@ -120,12 +120,12 @@ Une cardinalité minimale de 1 doit se justifier par le fait que les individus 
 |4|Reynaud|François Léonce|1803|1880|
 
 ### Table `job`
-|id|label|
-|--|-----|
-|1|architecte|
-|2|inspecteur|
+|id|label|definition?|
+|--|-----|-----------|
+|1|architecte||
+|2|inspecteur|||
 
-### Table de relation `hasJob`
+### Table d’association `hasJob`
 |archid|jobid|from|to|
 |------|-----|----|--|
 |1|1|1881|1884|
