@@ -15,7 +15,7 @@ CREATE TABLE architect (
   birth       TEXT,                                    -- ? date de naissance, AAAA-MM-JJ
   death       TEXT,                                    -- ? date de mort, AAAA-MM-JJ
   birthdpt    TEXT NULL REFERENCES dpt(code),          -- ? département de naissance
-  deathplace  TEXT NULL REFERENCES dpt(code),          -- ? lieu de mort
+  deathdpt    TEXT NULL REFERENCES dpt(code),          -- ? lieu de mort
   barts       BOOLEAN NOT NULL DEFAULT 0,              -- ? formation aux beaux-arts (oui/non)
   bartsyear   INTEGER,                                 -- ? année de promotion aux beaux-arts
   training    TEXT,                                    -- ? champ libre, description des autre(s) formation(s)

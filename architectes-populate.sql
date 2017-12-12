@@ -118,7 +118,7 @@ INSERT INTO dpt(code, label) VALUES
   ('976', 'Mayotte');
 
   -- les architectes
-  INSERT INTO architect(id, name, firstname, birth, death, birthdpt, deathplace, barts, bartsyear, training, rating, fatherWork) VALUES
+  INSERT INTO architect(id, name, firstname, birth, death, birthdpt, deathdpt, barts, bartsyear, training, rating, fatherWork) VALUES
     (1,"Abadie","Paul (père)","1783-07-22","1868-12-24","33","33",0,NULL,NULL,3,3),
     (2,"Abadie","Paul (fils)","1812-12-10","1884-08-12","75","78",0,1839,NULL,4,1),
     (3,"Béziers-Lafosse","Albert","1840","1908-09-14","22","75",0,1866,NULL,NULL,1),
