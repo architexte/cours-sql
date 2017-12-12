@@ -53,6 +53,8 @@ DELETE architect WHERE name='Durant';
 ```
 
 # Les clauses `SELECT` et `FROM`
+> **Pour les exercices suivants, ouvrir la base [architectes.db](./architectes.db) avec le client [DB Browser for SQLite](http://sqlitebrowser.org/).**
+
 * La clause SELECT indique la liste des attributs constituant le résultat.
 * La clause FROM indique la table dans laquelle on effectue la requête.
 ```sql
