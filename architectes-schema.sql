@@ -69,7 +69,7 @@ CREATE TABLE skill (
 
 CREATE TABLE hasSkills (
   archid      INTEGER NOT NULL REFERENCES architect(id),
-  skill       INTEGER NOT NULL REFERENCES skill(label),
+  skill       TEXT NOT NULL REFERENCES skill(label),
   fromdate    INTEGER,
   todate      INTEGER
 );
