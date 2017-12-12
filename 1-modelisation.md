@@ -19,16 +19,16 @@ introduction avec [SQLite](https://www.sqlite.org/index.html)
 
 ## Une base prosopographique ; un mail d’Olivier…
 > “[À partir de notices], nous déterminerons une liste de champs (...) :
-* patronyme (unique, obligatoire)
-* prénom (unique)
-* date de naissance (unique)
-* date de mort (unique)
-* poste d’architecte diocésain (multiple)
-* fonction comme architecte diocésain, ie architecte/inspecteur/suppléant/honoraire (unique pour chaque poste)
-* date de début (unique)
-* date de fin (unique)
-* diocèse (unique)
-...”
+> * patronyme (unique, obligatoire)
+> * prénom (unique)
+> * date de naissance (unique)
+> * date de mort (unique)
+> * poste d’architecte diocésain (multiple)
+> * fonction comme architecte diocésain, ie architecte/inspecteur/suppléant/honoraire (unique pour chaque poste)
+> * date de début (unique)
+> * date de fin (unique)
+> * diocèse (unique)
+> ...”
 
 # Une première base
 
