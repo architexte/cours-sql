@@ -8,7 +8,7 @@ Comment afficher les compétences (*skills*) de chaque architecte ?
 ```sql
 SELECT name, skill FROM architect, hasSkills;
 ```
-On obtient le **produit cartésien** (11x20 = 220 résultats).  
+On obtient le **produit cartésien** (11x40 = 440 résultats).  
 Il faut donc supprimer les résultats aberrants par une condition :
 ```sql
 SELECT name, skill FROM architect, hasSkills
@@ -70,6 +70,21 @@ Sélectionner les architectes qui ont suivi une unique restauration :
 SELECT archid, COUNT(buildingid) AS restauration_count
   FROM restore
   GROUP BY archid
-  HAVING restauration_count = 1 ;
+  HAVING restauration_count = 1;
 ```
 NB. La clause `WHERE` renverrait ici une erreur, car le filtrage ne porte pas sur la notion de lignes, mais sur la notion de sous-ensemble de la table. Le filtre doit porter sur chacun des groupes calculés.
+
+# Exploiter ses données : les interventions d’architectes
+Notre base est structurée et renseignée. Nous pouvons produire et exporter la donnée pour visualiser le réseau des interventions des architectes sur les différents bâtiments.
+```sql
+SELECT
+  architect.name || '_' || architect.id AS architecte,
+  building.label AS bâtiment
+  FROM architect, building, restore
+  WHERE
+    architect.id = restore.archid AND
+    building.id = restore.buildingid;
+```
+* Exporter les données en [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values).
+* Extraire le réseau depuis la table (CSV) de résultats avec [Table 2 Net](http://tools.medialab.sciences-po.fr/table2net/).
+* Visualiser le réseau avec [manylines](http://tools.medialab.sciences-po.fr/manylines) et/ou l’analyser avec [Gephi](https://gephi.org/).

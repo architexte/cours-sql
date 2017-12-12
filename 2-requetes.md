@@ -56,15 +56,15 @@ DELETE architect WHERE name='Durant';
 * La clause SELECT indique la liste des attributs constituant le résultat.
 * La clause FROM indique la table dans laquelle on effectue la requête.
 ```sql
-SELECT * FROM architect
+SELECT * FROM architect;
 ```
 ```sql
-SELECT name, firstname, birth FROM architect
+SELECT name, firstname, birth FROM architect;
 ```
 
 * Alias `AS`
 ```sql
-SELECT name AS nom, firstname AS prénom FROM architect
+SELECT name AS nom, firstname AS prénom FROM architect;
 ```
 
 # La clause `WHERE` : filtrer les résultats
@@ -74,18 +74,19 @@ SELECT * FROM architect WHERE birthdpt=75;
 * **Opérateurs de comparaison** : `<`, `<=`, `>`, `>=`, `=`, `!=` ou `<>`
 ```sql
 SELECT * FROM architect WHERE birth>1805;
+SELECT * FROM architect WHERE birth>'1805';
 ```
 * **Opérateurs intégrés** : `BETWEEN`, `IN`, `LIKE`, `IS`, `IS NOT`
 ```sql
 SELECT * FROM architect WHERE barts IS NOT 0;
 ```
 ```sql
-SELECT * FROM architect WHERE firstname LIKE ('%Paul%') ;
+SELECT * FROM architect WHERE firstname LIKE ('%Paul%');
 ```
 
 * **Opérateurs logiques** : `NOT`, `AND`, `OR`
 ```sql
-SELECT * FROM architect WHERE birth>1805 AND barts IS NOT 0 ;
+SELECT * FROM architect WHERE birth>1805 AND barts IS NOT 0;
 ```
 
 * **Opérateur de concaténation** : `||`
